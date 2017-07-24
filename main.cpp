@@ -1,5 +1,6 @@
 #include "LeetCode_70_ClimbingStairs_DP.h"
 #include "LeetCode_91_DecodeWays_DP.h"
+#include "LeetCode_64_MinimumPathSum_DP.h"
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc,char** argv)
@@ -21,15 +22,36 @@ int main(int argc,char** argv)
                 printf("result is %ld \n",result); 
             }
             break;
-	case 91:
-			{
-				printf("please input number \n");
-				char s[100];
-				scanf("%s",s);
-				int result = numDecodings(s);
-				printf("result is %d\n",result);	
-			}
-			break;
-    }
+    case 91:
+            {
+                printf("please input number \n");
+                char s[100];
+                scanf("%s",s);
+                int result = numDecodings(s);
+                printf("result is %d\n",result);    
+            }
+            break;
+    case 64:
+            {
+                int row;
+                int col;
+                printf("please input rows and cols");
+                scanf("%d %d",&row,&col);
+                int **grid = new int*[row];
+                for(int i = 0;i<row;++i)
+                {
+                    grid[i] = new int[col];
+                }
+                for(int i = 0;i < row;++i)
+                {
+                    for(int j = 0;j < col;++j)
+                    {
+                        scanf("%d",&grid[i][j]);
+                    }
+                }
+                int total = minPathSum(grid,row,col);
+                printf("the min path  is %d\n",total);
+            }
+	}
     return 0;
 }
