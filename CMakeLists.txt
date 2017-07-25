@@ -10,5 +10,6 @@ set(SRC
 	LeetCode_70_ClimbingStairs_DP.h
 	LeetCode_91_DecodeWays_DP.h
 	LeetCode_64_MinimumPathSum_DP.h
+	LeetCode_96_UniqueBinarySearchTrees_DP.h
    )
 add_executable(LeetCode ${SRC})

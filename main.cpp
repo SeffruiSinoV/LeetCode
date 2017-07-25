@@ -1,6 +1,7 @@
 #include "LeetCode_70_ClimbingStairs_DP.h"
 #include "LeetCode_91_DecodeWays_DP.h"
 #include "LeetCode_64_MinimumPathSum_DP.h"
+#include "LeetCode_96_UniqueBinarySearchTrees_DP.h"
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc,char** argv)
@@ -51,6 +52,14 @@ int main(int argc,char** argv)
                 }
                 int total = minPathSum(grid,row,col);
                 printf("the min path  is %d\n",total);
+            }
+    case 96:
+            {
+                int n;
+                printf("please number of nodes \n");
+                scanf("%d",&n);
+                int result = numTrees(n); 
+                printf("result is %d \n",result);  
             }
 	}
     return 0;
