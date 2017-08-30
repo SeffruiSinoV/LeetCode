@@ -2,6 +2,8 @@
 #include "LeetCode_91_DecodeWays_DP.h"
 #include "LeetCode_64_MinimumPathSum_DP.h"
 #include "LeetCode_96_UniqueBinarySearchTrees_DP.h"
+#include "LeetCode_11_ContainerWithMostWater_DP.h"
+#include "LeetCode_42_TrappingRainWater_BackTrack.h"
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc,char** argv)
@@ -14,6 +16,37 @@ int main(int argc,char** argv)
     int number = atoi(argv[1]);
     switch(number)
     {
+    case 11:
+        {
+            printf("please input the count\n");
+            int n;
+            scanf("%d",&n);
+            printf("please input n numbers\n");
+            int *data = (int*)malloc(sizeof(int) * n);
+
+            for(int i = 0; i < n; ++i) {
+                scanf("%d",&data[i]);
+            } 
+            
+            int max = maxArea(data,n);     
+            printf("max is %d\n",max);
+        }
+        break;
+    case 42:
+        {
+            printf("please input the count\n");
+            int n;
+            scanf("%d",&n);
+            printf("please input n numbers\n");
+            int *data = (int*)malloc(sizeof(int) * n);
+
+            for(int i = 0; i < n; ++i) {
+                scanf("%d",&data[i]);
+            } 
+            int max = trap(data,n);
+            printf("result is %d \n",max); 
+        }
+        break;
     case 70:
             {
                 printf("please input the number of stairs\n");
@@ -61,6 +94,7 @@ int main(int argc,char** argv)
                 int result = numTrees(n); 
                 printf("result is %d \n",result);  
             }
+		break;
 	}
     return 0;
 }
