@@ -4,6 +4,7 @@
 #include "LeetCode_96_UniqueBinarySearchTrees_DP.h"
 #include "LeetCode_11_ContainerWithMostWater_DP.h"
 #include "LeetCode_42_TrappingRainWater_BackTrack.h"
+#include "LeetCode_12_IntegerToRoma.h"
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc,char** argv)
@@ -30,6 +31,15 @@ int main(int argc,char** argv)
             
             int max = maxArea(data,n);     
             printf("max is %d\n",max);
+        }
+        break;
+    case 12:
+        {
+            int n;
+            printf("please input your number\n");
+            scanf("%d",&n);
+            char *s = intToRoman(n);
+            printf("%s\n",s);
         }
         break;
     case 42:

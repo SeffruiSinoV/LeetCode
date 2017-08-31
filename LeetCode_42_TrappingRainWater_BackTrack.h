@@ -15,34 +15,34 @@ int trap(int* height, int heightSize) {
     int temp = 0;
     int count = 0;
     int length = 0;
-	int min = 0;
+    int index = 0;
+    int min = 0;
     while(left < right) {
-		min = height[left] <= height[right] ? left : right;
+	min = height[left] <= height[right] ? left : right;
+	count = 0;
+	temp = height[min];
+	if(height[left] <= height[right]) {
 		count = 0;
-		temp = height[min];
-		while
-        if(height[left] <= height[right]) {
-            count = 0;
-            temp = height[left];
-            index = left;
-            while(left <= right  && height[left] <= temp) {
-                count += height[left];
-                left++;
-            }
-            length = left - index;
-            total = total + length * temp - count;
-        }
-        else {
-            count = 0;
-            temp = height[right];
-            index = right;
-            while(left <= right && height[right] <= temp) {
-                count += height[right];
-                right--;
-            }
-            length = index - right;
-            total = total + length * temp - count;
-        }
+		temp = height[left];
+		index = left;
+		while(left <= right  && height[left] <= temp) {
+			count += height[left];
+			left++;
+		}
+		length = left - index;
+		total = total + length * temp - count;
+	}
+	else {
+		count = 0;
+		temp = height[right];
+		index = right;
+		while(left <= right && height[right] <= temp) {
+			count += height[right];
+			right--;
+		}
+		length = index - right;
+		total = total + length * temp - count;
+	}
     }
     return total;
 }
