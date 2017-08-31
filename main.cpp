@@ -5,6 +5,7 @@
 #include "LeetCode_11_ContainerWithMostWater_DP.h"
 #include "LeetCode_42_TrappingRainWater_BackTrack.h"
 #include "LeetCode_12_IntegerToRoma.h"
+#include "LeetCode_13_RomaToInteger.h"
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc,char** argv)
@@ -40,6 +41,15 @@ int main(int argc,char** argv)
             scanf("%d",&n);
             char *s = intToRoman(n);
             printf("%s\n",s);
+        }
+        break;
+    case 13:
+        {
+            char s[16];
+            printf("input roma numbers\n");
+            scanf("%s",s);
+            int result = romanToInt(s);
+            printf("number is %d\n",result);
         }
         break;
     case 42:
